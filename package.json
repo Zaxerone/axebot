@@ -1,0 +1,34 @@
+{
+  "name": "axebot",
+  "version": "0.1.0",
+  "description": "Bot discord",
+  "main": "index.js",
+  "scripts": {
+    "build:gulp": "gulp build",
+    "watch:gulp": "gulp watch",
+    "serve:gulp": "gulp serve",
+    "start:gulp": "gulp start",
+    "serve": "npm run serve:gulp -s",
+    "watch": "npm run watch:gulp -s",
+    "build": "npm run build:gulp -s",
+    "start": "npm run start:gulp -s"
+  },
+  "author": "Zaxerone",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.12.17",
+    "@types/ws": "^6.0.4",
+    "@types/yamljs": "^0.2.30",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^4.0.2",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "discord.js": "discordjs/discord.js",
+    "yamljs": "^0.3.0"
+  }
+}
