@@ -1,1 +1,0 @@
-# AxeBot - Bot Discord
