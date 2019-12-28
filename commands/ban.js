@@ -1,4 +1,5 @@
 const { Command } = require('discord-akairo');
+const ms = require('ms');
 
 class BanCommand extends Command {
 	constructor() {
@@ -7,6 +8,13 @@ class BanCommand extends Command {
 				{
 					id: 'member',
 					type: 'member'
+				},
+				{
+					id: 'time'
+				},
+				{
+					id: 'reason',
+					match: 'content'
 				}
 			],
 			clientPermissions: ['BAN_MEMBERS'],
@@ -18,10 +26,16 @@ class BanCommand extends Command {
 	}
 
 	async exec(message, args) {
-		message.delete({ timeout: 3000 });
+		const reason = args.reason.slice(2);
 		if (!args.member) return message.reply("Aucun membre n'a été trouvé!");
-		await args.member.ban();
-		return message.channel.send(`${args.member} a été banni!`);
+		await args.member.ban(reason);
+		message.delete({ timeout: 3000 });
+		message.channel.send(`${args.member} a été banni!`);
+
+		setTimeout(async () => {
+			await args.member.unban();
+		}, ms(args.time));
+		return;
 	}
 }
 

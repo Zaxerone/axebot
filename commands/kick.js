@@ -1,4 +1,5 @@
 const { Command } = require('discord-akairo');
+const ms = require('ms');
 
 class KickCommand extends Command {
 	constructor() {
@@ -7,6 +8,10 @@ class KickCommand extends Command {
 				{
 					id: 'member',
 					type: 'member'
+				},
+				{
+					id: 'reason',
+					match: 'content'
 				}
 			],
 			clientPermissions: ['KICK_MEMBERS'],
@@ -18,9 +23,10 @@ class KickCommand extends Command {
 	}
 
 	async exec(message, args) {
-		message.delete({ timeout: 3000 });
+		const reason = args.reason.slice(1);
 		if (!args.member) return message.reply("Aucun membre n'a été trouvé!");
-		await args.member.kick();
+		await args.member.kick(reason);
+		message.delete({ timeout: 3000 });
 		return message.channel.send(`${args.member} a été kick!`);
 	}
 }

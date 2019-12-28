@@ -37,4 +37,8 @@ typings/
 .nuxt
 dist
 build/
-src/config/
+inhibitors/
+data/
+.prettierrc
+yarn.lock
+config.js
