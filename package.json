@@ -2,12 +2,11 @@
 	"name": "axebot",
 	"version": "0.1.0",
 	"description": "Bot discord",
-	"main": "bot.js",
+	"main": "main.js",
 	"author": "Zaxerone",
 	"license": "MIT",
 	"dependencies": {
 		"chalk": "^3.0.0",
-		"discord-akairo": "discord-akairo/discord-akairo",
 		"discord.js": "discordjs/discord.js",
 		"dotenv": "^8.2.0",
 		"ejs": "^3.0.1",

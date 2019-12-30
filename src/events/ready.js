@@ -1,4 +1,5 @@
-const { Listener } = require('discord-akairo');
+'use strict';
+
 const { green, blue } = require('chalk');
 const express = require('express');
 const dashboard = express();
@@ -7,23 +8,22 @@ const passport = require('passport');
 const Strategy = require('passport-discord').Strategy;
 const session = require('express-session');
 const MemoryStore = require('memorystore')(session);
+
 const {
 	botID,
 	oauthSecret,
 	port,
 	sSecret,
 	callbackURL
-} = require('../config.js');
+} = require('../../config.js');
 
-class ReadyListener extends Listener {
-	constructor() {
-		super('ready', {
-			emitter: 'client',
-			event: 'ready'
-		});
-	}
+module.exports = async client => {
 
-	async exec(client) {
+	client.user.setPresence({ activity: { name: 'axebot.fr' }, status: 'dnd' });
+	client.appInfo = await client.fetchApplication();
+	setTimeout(() => {
+			client.appInfo = client.fetchApplication();
+	}, 3600000);
 		console.log(green("I'm ready!"));
 		// root/dashboard/
 		const dashboardDirectory = path.resolve(
@@ -114,7 +114,4 @@ class ReadyListener extends Listener {
 
 		dashboard.listen(port);
 		console.log(blue('Dashboard is ready!'));
-	}
 }
-
-module.exports = ReadyListener;
