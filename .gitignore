@@ -1,8 +1,7 @@
-# npm dependence
-node_modules/
+# npm dépendance
+/node_modules
 
-# Environnement
-.prettierrc
+# environnement
 .env
+desktop.ini
 config.js
-src/data/
