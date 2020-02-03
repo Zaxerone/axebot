@@ -1,8 +1,0 @@
-# npm dependence
-node_modules/
-
-# Environnement
-.prettierrc
-.env
-config.js
-src/data/
