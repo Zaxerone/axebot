@@ -27,4 +27,8 @@ process.on("warning", console.warn);
 process.on("unhandledRejection", console.error);
 process.on("uncaughtException", console.error);
 process.on("removeListener", console.log);
+<<<<<<< HEAD
 process.on("rejectionHandled", console.error);
+=======
+process.on("rejectionHandled", console.error);
+>>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1

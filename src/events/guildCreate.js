@@ -1,6 +1,7 @@
 "use strict";
 
 module.exports = async (client, guild) => {
+<<<<<<< HEAD
   const newGuild = {
     guildID: guild.id,
     guildName: guild.name
@@ -28,3 +29,12 @@ module.exports = async (client, guild) => {
     client.user.setActivity(require("../../botconfig").ACTIVITY, { type: "WATCHING"}); 
   }, 7 * 1000)
 };
+=======
+    const newGuild = {
+        guildID: guild.id,
+        guildName: guild.name,
+    };
+
+    await client.createGuild(newGuild);
+};
+>>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1

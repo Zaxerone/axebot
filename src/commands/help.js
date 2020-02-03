@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 const { readdirSync } = require("fs");
 
@@ -96,4 +97,32 @@ function AddFields(client, object) {
     
    result = object;    
    return result;
+=======
+'use strict';
+
+module.exports = {
+    name: 'help',
+    aliases: ['aide', 'h'],
+    description: 'Affiche toutes les commandes du bot !',
+    cooldown: 5,
+    execute(client, { channel }) {
+        var commands = client.commands
+        return channel.send({
+            embed: {
+                title: 'Commande help !',
+                color: client.config.color(),
+                thumbnail: {
+                    url: client.user.displayAvatarURL(),
+                },
+                fields: [
+                    {
+                        name: 'Commands',
+                        value: client.commands.map(c => c.name).join(', '),
+                    },
+                ],
+                timestamp: new Date(),
+            },
+        });
+    }
+>>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1
 }

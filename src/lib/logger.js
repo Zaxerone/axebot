@@ -59,4 +59,8 @@ class Logger {
   }
 }
 
+<<<<<<< HEAD
 module.exports = Logger;
+=======
+module.exports = Logger;
+>>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1

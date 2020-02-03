@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 "use strict";
+=======
+'use strict';
+>>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1
 
 module.exports.Colors = {
   DEFAULT: 0x000000,
@@ -28,5 +32,10 @@ module.exports.Colors = {
   BLURPLE: 0x7289da,
   GREYPLE: 0x99aab5,
   DARK_BUT_NOT_BLACK: 0x2c2f33,
+<<<<<<< HEAD
   NOT_QUITE_BLACK: 0x23272a
 };
+=======
+  NOT_QUITE_BLACK: 0x23272a,
+};
+>>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1
