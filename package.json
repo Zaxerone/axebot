@@ -18,7 +18,8 @@
   "author": "Zaxerone",
   "license": "MIT",
   "repository": "https://github.com/Zaxerone/axebot.git",
-"dependencies": {
+  "dependencies": {
+    "dotenv": "^8.2.0",
     "chalk": "^3.0.0",
     "discord.js": "github:discordjs/discord.js",
     "erlpack": "github:discordapp/erlpack",
@@ -33,12 +34,12 @@
     "ytdl-core": "^1.0.3",
     "zlib-sync": "^0.1.6",
     "zucc": "^0.1.2"
-},
-"devDependencies": {
+   },
+ "devDependencies": {
     "eslint": "^6.7.2",
     "eslint-config-aqua": "^7.1.2"
-},
-"eslintConfig": {
+   },
+  "eslintConfig": {
     "extends": "aqua/node",
     "rules": {
         "linebreak-style": [
@@ -56,5 +57,5 @@
         ],
         "curly": "off"
     }
-}
+  }
 }
