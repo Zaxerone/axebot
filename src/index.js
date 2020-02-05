@@ -19,7 +19,6 @@ const fs = require("fs");
 client.mongoose = require("./lib/mongoose");
 require("./lib/functions")(client);
 client.config = require("./../config");
->>>>>>> 4c25e874e06ecebb7c351ea42ff6f8a205d2e1b1
 client.function = require("./Resolver");
 client.cooldowns = new Collection();
 client.commands = new Collection();
@@ -54,6 +53,4 @@ for (const file of commandFiles) {
 client.mongoose.init();
 client.login();
 client.on("error", console.error);
-<<<<<<< HEAD
-client.on("warn", console.warn);
 client.on("warn", console.warn);
