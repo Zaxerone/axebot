@@ -38,8 +38,7 @@ fs.readdir("./src/events/", (err, files) => {
   });
 });
 
-const commandFiles = 
-   readdirSync("./src/commands")
+
 const commandFiles = fs
   .readdirSync("./src/commands")
   .filter(file => file.endsWith(".js"));
