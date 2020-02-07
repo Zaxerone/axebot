@@ -3,7 +3,6 @@
   "version": "0.1.1",
   "main": "main.js",
   "description": "Multi-function discord bot",
-  "main": "main.js",
   "scripts": {
     "test": "node main.js"
   },
