@@ -4,7 +4,7 @@ module.exports = {
   name: "reputation",
   aliases: ["rep"],
   description: "Affiche ou ajoute une réputation",
-  cooldown: 86400,
+  cooldown: 7,
   category: "compte",
   async execute(client, { S_User, channel, args, guild, message, user }) {
     var userSearch = args.shift();

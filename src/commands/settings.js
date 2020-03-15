@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["configuration", "config", "set"],
   description: "Configure le bot par apport à la Guild",
   guildOnly: true,
-  cooldown: 50,
+  cooldown: 11,
   category: "config",
   async execute(
     client,

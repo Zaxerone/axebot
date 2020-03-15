@@ -11,7 +11,7 @@ module.exports = {
   aliases: [],
   description: "Systeme Bank",
   guildOnly: true,
-  cooldown: 1,
+  cooldown: 5,
   category: "economie",
   async execute(
     client,
