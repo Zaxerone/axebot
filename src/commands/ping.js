@@ -7,10 +7,13 @@ module.exports = {
   cooldown: 5,
   category: "utile",
   async execute(client, { message, channel }) {
-      var m = await channel.send("Pong!");
-      var compared = (m.createdAt || m.editedAt) - (message.createdAt || message.editedAt);
-      m.edit(
-       `Pong!\nLatence: ${Math.round(compared)} ms\nLatence API: ${Math.round(client.ws.ping)} ms`
-      )
- }
+    var m = await channel.send("Pong!");
+    var compared =
+      (m.createdAt || m.editedAt) - (message.createdAt || message.editedAt);
+    m.edit(
+      `Pong!\nLatence: ${Math.round(compared)} ms\nLatence API: ${Math.round(
+        client.ws.ping
+      )} ms`
+    );
+  }
 };

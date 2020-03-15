@@ -24,20 +24,16 @@ client.cooldowns = new Collection();
 client.commands = new Collection();
 client.connection = false;
 
+const eventFiles = fs
+  .readdirSync("./src/events")
+  .filter(file => file.endsWith(".js"));
 
-readdir("./src/events/", (err, files) => {
+for (const file of eventFiles) {
+  const event = require(`./events/${file}`);
+  const eventName = file.split(".")[0];
 
-fs.readdir("./src/events/", (err, files) => {
-  if (err) return console.error;
-  files.forEach(file => {
-    const event = require(`./events/${file}`);
-    const eventName = file.split(".")[0];
-    console.log(`Event ${eventName} loaded`);
-    console.log(`Event ${eventName} chargée`);
-    client.on(eventName, event.bind(null, client));
-  });
-});
-
+  client.on(eventName, event.bind(null, client));
+}
 
 const commandFiles = fs
   .readdirSync("./src/commands")

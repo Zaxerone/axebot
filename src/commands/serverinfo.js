@@ -97,37 +97,36 @@ function toLocalDate(timestamp) {
 }
 
 function getEmotes(Callback) {
-    var result;
- if (Callback.emotes.length > 5) {
+  var result;
+  if (Callback.emotes.length > 5) {
+    result =
+      Callback.emotes
+        .map(emotes => emotes)
+        .slice(0, 9)
+        .join(" ") + " ...";
+  } else {
     result = Callback.emotes
       .map(emotes => emotes)
       .slice(0, 9)
-      .join(" ") + " ..."
- }
-  else{ 
-      result = Callback.emotes
-      .map(emotes => emotes)
-      .slice(0, 9)
-      .join(" ")
-      }
-  if(!result) result = "Aucun émote";
+      .join(" ");
+  }
+  if (!result) result = "Aucun émote";
   return result;
 }
 
 function getRoles(Callback) {
-    var result;
-   if (Callback.roles.length > 5){
-   result = Callback.roles
-      .map(roles => roles)
-      .slice(1, 5)
-      .join(", ") + " ..."
-       
-   }
-  else{
+  var result;
+  if (Callback.roles.length > 5) {
+    result =
+      Callback.roles
+        .map(roles => roles)
+        .slice(1, 5)
+        .join(", ") + " ...";
+  } else {
     result = Callback.roles
       .map(roles => roles)
       .slice(1, 5)
-      .join(", ")
+      .join(", ");
   }
   if (!result) result = "Aucun rôle";
   return result;

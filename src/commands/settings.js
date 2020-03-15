@@ -59,7 +59,7 @@ module.exports = {
           `welcomeMessage actuel: \`${guildSettings.welcomeMessage}\``
         );
         break;
-        case "logsChannel":
+      case "logsChannel":
         if (newSettings) {
           const choiceChannel =
             guild.channels.get(newSettings) ||
@@ -74,14 +74,19 @@ module.exports = {
             `logsChannel mis à jour: \`${guildSettings.logsChannel}\` -> \`${choiceChannel.name}\``
           );
         }
-        channel.send(
-          `logsChannel actuel: \`${guildSettings.welcomeChannel}\``
-        );
+        channel.send(`logsChannel actuel: \`${guildSettings.welcomeChannel}\``);
         break;
       default:
         var AllSettings = "";
         for (const key in guildSettings) {
-          if (["prefix", "welcomeChannel", "welcomeMessage", "logsChannel"].includes(key)) {
+          if (
+            [
+              "prefix",
+              "welcomeChannel",
+              "welcomeMessage",
+              "logsChannel"
+            ].includes(key)
+          ) {
             AllSettings += `**${key}**: actuellement \`${guildSettings[key]}\`\n`;
           }
         }

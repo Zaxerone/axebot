@@ -52,47 +52,51 @@ module.exports = {
       ].join("\n");
 
       return channel.send({ embed: embed });
-    } 
-      AddFields(client, embed);
-      channel.send({ embed: embed });
+    }
+    AddFields(client, embed);
+    channel.send({ embed: embed });
   }
 };
 
 function getCategory(client, name) {
-    if (typeof name !== "string") return TypeError("Le nom doit être de type `string`")
-   return client.commands.filter(cmd => cmd.category == name).map(cmd => `\`${cmd.name}\``).join(', ');
+  if (typeof name !== "string")
+    return TypeError("Le nom doit être de type `string`");
+  return client.commands
+    .filter(cmd => cmd.category == name)
+    .map(cmd => `\`${cmd.name}\``)
+    .join(", ");
 }
 
 function AddFields(client, object) {
-    var result;
-    
-   object.fields = [
-        {
-          name: "Fun",
-          value: getCategory(client, "fun")
-        },
-        {
-          name: "Modération",
-          value: getCategory(client, "moderation")
-        },
-        {
-          name: "Economie",
-          value: getCategory(client, "economie")
-        },
-        {
-          name: "Utilitaires",
-          value: getCategory(client, "utile")
-        },
-        {
-          name: "Comptes",
-          value: getCategory(client, "compte")
-        },
-        {
-          name: "Configuration",
-          value: getCategory(client, "config")
-        }
-    ]
-    
-   result = object;
-   return result;
+  var result;
+
+  object.fields = [
+    {
+      name: "Fun",
+      value: getCategory(client, "fun")
+    },
+    {
+      name: "Modération",
+      value: getCategory(client, "moderation")
+    },
+    {
+      name: "Economie",
+      value: getCategory(client, "economie")
+    },
+    {
+      name: "Utilitaires",
+      value: getCategory(client, "utile")
+    },
+    {
+      name: "Comptes",
+      value: getCategory(client, "compte")
+    },
+    {
+      name: "Configuration",
+      value: getCategory(client, "config")
+    }
+  ];
+
+  result = object;
+  return result;
 }

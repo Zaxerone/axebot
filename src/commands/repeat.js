@@ -8,8 +8,8 @@ module.exports = {
   cooldown: 5,
   category: "fun",
   execute(client, { message, args, channel }) {
-    if (args.join(" ") == '') return channel.send("Veuillez définir un message");
-    channel.send(args.join(" "))
-    .then(() => message.delete({ timeout: 0 }))
+    if (args.join(" ") == "")
+      return channel.send("Veuillez définir un message");
+    channel.send(args.join(" ")).then(() => message.delete({ timeout: 0 }));
   }
 };

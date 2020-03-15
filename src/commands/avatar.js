@@ -38,4 +38,5 @@ module.exports = {
         messageLoading.delete({ timeout: 0 });
       })
       .catch(console.error);
+  }
 };

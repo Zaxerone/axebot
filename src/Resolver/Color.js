@@ -19,5 +19,4 @@ module.exports = color => {
     throw new TypeError("Unable to convert color to a number.");
   }
   return color;
-
 };

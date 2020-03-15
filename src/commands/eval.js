@@ -19,8 +19,7 @@ module.exports = {
     client,
     { message, args, user, channel, guild, member, S_Guild, S_User }
   ) {
-    if (user.id !== "525729900670222337")
-      return false;
+    if (user.id !== "525729900670222337") return false;
     const code = args.join(" ");
     if (!code) return false;
     try {

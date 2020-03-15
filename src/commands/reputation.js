@@ -24,4 +24,4 @@ module.exports = {
     await client.updateUser(UserFound, { repCount: repCount + 1 });
     return channel.send(`Vous avez donné une réputation à ${UserFound}`);
   }
-}
+};

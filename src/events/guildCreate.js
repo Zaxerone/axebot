@@ -7,8 +7,10 @@ module.exports = async (client, guild) => {
   };
 
   await client.createGuild(newGuild);
-  
-  await client.user.setActivity(`${guild.name} a ajouté le bot!`, { type: "WATCHING" });
+
+  await client.user.setActivity(`${guild.name} a ajouté le bot!`, {
+    type: "WATCHING"
+  });
 
   const support = client.guilds.get("654435341385728022");
   const channel = support.channels.find(ch => ch.name == "guild-logs");
@@ -25,8 +27,8 @@ module.exports = async (client, guild) => {
     }
   });
   setTimeout(() => {
-    client.user.setActivity(require("../../botconfig").ACTIVITY, { type: "WATCHING"}); 
-  }, 7 * 1000)
+    client.user.setActivity(require("../../botconfig").ACTIVITY, {
+      type: "WATCHING"
+    });
+  }, 7 * 1000);
 };
-};
-
