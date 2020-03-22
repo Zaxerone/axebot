@@ -33,28 +33,9 @@
     "ytdl-core": "^2.0.0",
     "zlib-sync": "^0.1.6",
     "zucc": "^0.1.2"
-   },
- "devDependencies": {
+  },
+  "devDependencies": {
     "eslint": "^6.7.2",
     "eslint-config-aqua": "^7.1.2"
-   },
-  "eslintConfig": {
-    "extends": "aqua/node",
-    "rules": {
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "warn",
-            "double",
-            "single"
-        ],
-        "indent": [
-            "error",
-            2
-        ],
-        "curly": "off"
-    }
   }
 }

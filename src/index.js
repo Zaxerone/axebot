@@ -8,13 +8,11 @@ const client = new Client({
   restRequestTimeout: 25000,
   retryLimit: 2
 });
-const { readdirSync, readdir } = require("fs");
-const { sep } = require("path");
+const { readdirSync } = require("fs");
 
 client.mongoose = require("./lib/mongoose");
 require("./lib/functions")(client);
 client.config = require("../botconfig");
-const fs = require("fs");
 
 client.mongoose = require("./lib/mongoose");
 require("./lib/functions")(client);
@@ -24,9 +22,9 @@ client.cooldowns = new Collection();
 client.commands = new Collection();
 client.connection = false;
 
-const eventFiles = fs
-  .readdirSync("./src/events")
-  .filter(file => file.endsWith(".js"));
+const eventFiles = readdirSync("./src/events").filter(file =>
+  file.endsWith(".js")
+);
 
 for (const file of eventFiles) {
   const event = require(`./events/${file}`);
@@ -35,9 +33,9 @@ for (const file of eventFiles) {
   client.on(eventName, event.bind(null, client));
 }
 
-const commandFiles = fs
-  .readdirSync("./src/commands")
-  .filter(file => file.endsWith(".js"));
+const commandFiles = readdirSync("./src/commands").filter(file =>
+  file.endsWith(".js")
+);
 
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
