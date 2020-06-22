@@ -35,7 +35,7 @@
     "zucc": "^0.1.2"
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
+    "eslint": "^7.3.0",
     "eslint-config-aqua": "^7.1.2"
   }
 }
