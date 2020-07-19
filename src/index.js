@@ -10,13 +10,10 @@ const client = new Client({
 });
 const { readdirSync } = require("fs");
 
-client.mongoose = require("./lib/mongoose");
-require("./lib/functions")(client);
-client.config = require("../botconfig");
 
 client.mongoose = require("./lib/mongoose");
 require("./lib/functions")(client);
-client.config = require("./../config");
+client.config = require("../botconfig");
 client.function = require("./Resolver");
 client.cooldowns = new Collection();
 client.commands = new Collection();
