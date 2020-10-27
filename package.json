@@ -4,8 +4,12 @@
   "main": "main.js",
   "description": "Multi-function discord bot",
   "scripts": {
+<<<<<<< HEAD
     "test": "node main.js",
     "dev": "nodemon main.js"
+=======
+    "start": "node main.js"
+>>>>>>> 5cfa863192c600dea41895f17636007c74cb7652
   },
   "keywords": [
     "bot",
@@ -35,8 +39,5 @@
     "zlib-sync": "^0.1.6",
     "zucc": "^0.1.2"
   },
-  "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-config-aqua": "^7.1.2"
-  }
+  "devDependencies": {}
 }
