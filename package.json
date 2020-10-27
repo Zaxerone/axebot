@@ -4,7 +4,8 @@
   "main": "main.js",
   "description": "Multi-function discord bot",
   "scripts": {
-    "test": "node main.js"
+    "test": "node main.js",
+    "dev": "nodemon main.js"
   },
   "keywords": [
     "bot",

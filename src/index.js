@@ -14,9 +14,6 @@ client.mongoose = require("./lib/mongoose");
 require("./lib/functions")(client);
 client.config = require("../botconfig");
 
-client.mongoose = require("./lib/mongoose");
-require("./lib/functions")(client);
-client.config = require("./../config");
 client.function = require("./Resolver");
 client.cooldowns = new Collection();
 client.commands = new Collection();
